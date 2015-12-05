@@ -2,13 +2,10 @@ package hudson.plugins.skype.im.transport;
 
 import com.skype.Chat;
 import com.skype.Chat.Status;
-import com.skype.SkypeImpl;
 import com.skype.SkypeException;
 import hudson.plugins.im.IMChat;
 import hudson.plugins.im.IMException;
 import hudson.plugins.im.IMMessageListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * 1-on-1 Jabber chat.
@@ -40,7 +37,7 @@ public class SkypeChat implements IMChat {
     public void addMessageListener(IMMessageListener listener) {
         //this.messageListener = new SkypeMessageListenerAdapter(listener);
         //try {
-        //    SkypeImpl.addChatMessageListener(messageListener);
+        //    Skype.addChatMessageListener(messageListener);
         //} catch (SkypeException ex) {
         //    Logger.getLogger(SkypeChat.class.getName()).log(Level.SEVERE, null, ex);
        // }
@@ -49,7 +46,7 @@ public class SkypeChat implements IMChat {
     public void removeMessageListener(IMMessageListener listener) {
         // doesn't work out-of the box with Smack
 
-        //SkypeImpl.removeChatMessageListener(messageListener);
+        //Skype.removeChatMessageListener(messageListener);
 
     }
 

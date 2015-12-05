@@ -7,12 +7,10 @@ package hudson.plugins.skype.im.transport.callables;
 
 import com.skype.Chat;
 import com.skype.ChatMessage;
+import com.skype.Skype;
 import com.skype.SkypeException;
-import com.skype.SkypeImpl;
 import hudson.plugins.skype.im.transport.SkypeIMException;
 import hudson.remoting.Callable;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -29,7 +27,7 @@ public class SkypeChatCallable implements Callable<ChatMessage, SkypeIMException
     }
     public ChatMessage call() throws SkypeIMException {
         try {
-            Chat chat = SkypeImpl.chat(skypeNames);
+            Chat chat = Skype.chat(skypeNames);
             return chat.send(message);
         } catch (SkypeException ex) {
             throw new SkypeIMException(ex);

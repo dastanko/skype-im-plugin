@@ -5,10 +5,7 @@
 
 package hudson.plugins.skype.im.transport;
 
-import com.skype.Chat;
-import com.skype.SkypeImpl;
 import hudson.model.Hudson;
-import hudson.model.Node;
 import hudson.model.Node.Mode;
 import hudson.plugins.im.DefaultIMMessageTarget;
 import hudson.plugins.im.IMMessageTarget;
