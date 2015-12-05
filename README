@@ -11,3 +11,5 @@ This plugin requires special hudson setup to work.
 Notes
 The libskype.so is build for CentOS 5.5
 I used the static version of skype, but I guess other versions will work also.
+
+test commit;
